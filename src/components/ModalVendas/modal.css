@@ -1,0 +1,14 @@
+.vendas-container{
+    border: orange solid 2px;
+    max-width: 100%;
+    min-width: 510px;
+    background-color: white;
+    padding: 0;
+    overflow-y: scroll;
+    
+}
+
+.modal-table{
+    width: 100%;
+    table-layout: fixed;
+}

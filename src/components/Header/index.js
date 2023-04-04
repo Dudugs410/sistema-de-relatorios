@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { FiSettings } from "react-icons/fi"
 
 import './header.css'
+import '../../pages/Vendas/vendas.css'
 
 const Header = () =>{
     return(
@@ -13,13 +13,13 @@ const Header = () =>{
                 </div>
                 <div className='navbar-customer-wrapper'>
                     <div className='navbar-customer'>
-                        <h4>Filial Placeholder</h4>
-                        <h6>123456789101112</h6>
+                        <span>Filial Placeholder</span>
+                        <span>123456789101112</span>
                     </div>
                     
                     <div className='navbar-customer'>
-                        <h4>Cliente Placeholder</h4>
-                        <h6>123456789101112</h6> 
+                        <span className='client-name'>Cliente Placeholder</span>
+                        <span className='client-code'>123456789101112</span> 
                     </div>              
                 </div>
                 <button type='button' className='btn-exit'><FiSettings color="#FFF" size={24}/></button>
@@ -35,7 +35,7 @@ const Header = () =>{
                             <Link to='/vendas' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Vendas</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Recebíveis</Link>
+                            <Link to='/recebiveis' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Recebíveis</Link>
                         </li>
                         <li className="nav-item">
                             <Link to='/' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Antecipações</Link>

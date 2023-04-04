@@ -1,0 +1,22 @@
+.card-vendas{
+    background-color: white;
+    height: 100%;
+    text-align: left;
+    padding: 5%;
+    border:solid red 1px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.card-vendas>.btn-div>.button-container>button{
+    position: relative;
+
+}
+
+.valores-div{
+    display: flex;
+    justify-content: space-between;
+}

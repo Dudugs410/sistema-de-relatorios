@@ -1,8 +1,10 @@
 import React from "react"
 
+
 import './login.css'
 
 const Login = () => {
+
     return(
         <div className='body-login'>  
             <div className='bg-login'>
@@ -16,7 +18,7 @@ const Login = () => {
                 </div>
 
                 <button type='button' className='btn btn-primary'/>
-                
+            
             </form>
         </div>
     )

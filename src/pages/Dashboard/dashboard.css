@@ -1,17 +1,17 @@
+
+
 .dashboard-content-wrapper{
     color: white;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .dashboard-content{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100vw;
+    width: 100%;
     background-color: rgba(0,0,0,0.5);
     text-align: center;
+    margin-top: 16px;
 }
 
 .dashboard-graph-wrapper{
@@ -20,39 +20,31 @@
     display: inline-flex;
     flex-direction: row;
     justify-content: space-evenly;
+    
 }
 
 .graph-content{
     height: 100%;
     width: 100%;
     text-align: center;
-
+    margin: 20px;
     background-color: rgba(0,0,0,0.5);
 }
 
 .dashboard-table-wrapper{
     background-color: rgba(0,0,0,0.5);
     width: 100%;
+    margin-top: 40px;
 
 }
 
 .table{
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-table{
-
 }
 
 thead{
 
     background-color: rgba(0,0,0,0.5);
-}
-
-tbody{
-
 }
 
 th{
@@ -64,8 +56,6 @@ th{
 
 td{
 
-    color:white;
+    color:blue;
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
 }
