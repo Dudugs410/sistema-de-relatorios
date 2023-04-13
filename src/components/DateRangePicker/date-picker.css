@@ -1,0 +1,16 @@
+.picker{
+    display: inline-flex;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+
+.picker>label{
+    color: white;
+    text-align: center;
+    width: 50px;
+}
+
+.picker>label:first-child{
+    margin-left: 10px;
+}

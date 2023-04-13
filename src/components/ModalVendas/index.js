@@ -1,4 +1,5 @@
 import './modal.css'
+import { FiZoomIn } from 'react-icons/fi'
 
 export default function ModalVendas({ conteudo }){
 
@@ -19,6 +20,7 @@ console.log('tela detalhes')
                             <th scope="col">Valor descontado</th>
                             <th scope="col">Valor Líquido da venda</th>
                             <th scope="col">Status</th>
+                            <th scope="col">#</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,6 +34,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -43,6 +46,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -54,6 +58,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -65,6 +70,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -76,6 +82,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -87,6 +94,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -98,6 +106,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -109,6 +118,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -120,6 +130,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -131,6 +142,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -142,6 +154,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -153,6 +166,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -164,6 +178,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -175,6 +190,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -186,6 +202,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -197,6 +214,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -208,6 +226,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -219,6 +238,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -230,6 +250,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         <tr>
                             <td data-label="Data e Hora">place_holder</td>
@@ -241,6 +262,7 @@ console.log('tela detalhes')
                             <td data-label="Valor descontado">place_holder</td>
                             <td data-label="Valor Líquido da venda">place_holder</td>
                             <td data-label="Status">place_holder</td>
+                            <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
                         </tr>
                         
                     </tbody>

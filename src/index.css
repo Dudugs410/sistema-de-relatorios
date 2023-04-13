@@ -1,6 +1,8 @@
 html, body, .app, #root{
   height: 100%;
+  width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 h1, h2, h3, h4, h5{
@@ -37,6 +39,12 @@ li, ul{
 }
 
 .drop-shadow{
-  max-width: 100vw;
+  max-width: 100%;
   filter: drop-shadow(5px 5px 10px #000);
 }
+
+.page{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+

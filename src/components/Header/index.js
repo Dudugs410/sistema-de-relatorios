@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom"
-import { FiSettings } from "react-icons/fi"
+import { Link, useNavigate } from "react-router-dom"
+import { FiLogOut } from "react-icons/fi"
 
 import './header.css'
 import '../../pages/Vendas/vendas.css'
 
 const Header = () =>{
+    const navigate = useNavigate()
+
+
+    function logout(){
+        navigate('/')
+    }
+
     return(
         <>
             <div className='header-bg'>
@@ -22,11 +29,11 @@ const Header = () =>{
                         <span className='client-code'>123456789101112</span> 
                     </div>              
                 </div>
-                <button type='button' className='btn-exit'><FiSettings color="#FFF" size={24}/></button>
+                <button type='button' className='btn-exit' onClick={logout}><FiLogOut color="#000000" size={24}/></button>
             </div>
             
             <div className='header-content drop-shadow'>
-                <div>
+                <div className="li-container">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <Link to='/dashboard' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Início</Link>
@@ -38,10 +45,10 @@ const Header = () =>{
                             <Link to='/recebiveis' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Recebíveis</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Antecipações</Link>
+                            <Link to='/antecipacoes' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Antecipações</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Serviços</Link>
+                            <Link to='/servicos' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Serviços</Link>
                         </li>
                         <li className="nav-item">
                             <Link to='/' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Relatórios</Link>
