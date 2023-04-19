@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import api from "../../services/api"
 import axios from "axios"
@@ -8,11 +8,13 @@ import md5 from "md5"
 import { USU } from "../../resources/usuarios"
 
 import './login.css'
+import Dashboard from "../Dashboard"
 
 const Login = () => {
     const [user, setUser] = useState('')
     const [pw, setPw] = useState('')
     const [md5str, setMd5] = useState('')
+    const navigate = useNavigate()
 
     async function submitLogin(user, pw){
         console.log('oi')
@@ -27,12 +29,16 @@ const Login = () => {
         }
     }
 
+    const Log = () => {
+        navigate('/Dashboard')
+    }
+
     return(
         <div className='page'>
             <div className='body-login'>  
                 <div className='bg-login'>
                 </div>
-                <form type='submit' className='form-login' onSubmit={submitLogin}>
+                <form type='submit' className='form-login' onSubmit={Log}>
                     <h1 className='titulo-login'>LOGIN</h1>
                     <div className='input-container'>
                         <input className='input-login' type='text' placeholder='usuário' value={user} onChange={(e) => setUser(e.target.value)}/>
