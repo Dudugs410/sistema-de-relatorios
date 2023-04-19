@@ -33,55 +33,32 @@ const Dashboard = () => {
                         <div className="graph-content">
                             <span>Últimos 5 dias</span>
                         </div>
+                        <div className='table-title'>TESTE</div>
                         <div className='dashboard-table-wrapper'>
                             <div className="table-content dropShadow">
                                 <table className="table table-bordered ">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Cliente</th>
-                                            <th scope="col">Assunto</th>
-                                            <th scope="col">Status</th>                                    
-                                            <th scope="col">Data de Criação</th>
+                                            <th scope="col">Dados_Place_Holder</th>
+                                            <th scope="col">Dados_Place_Holder</th>
+                                            <th scope="col">Dados_Place_Holder</th>                                    
+                                            <th scope="col">Dados_Place_Holder</th>
+                                            <th scope="col">Dados_Place_Holder</th>
+                                            <th scope="col">Dados_Place_Holder</th>
+                                            <th scope="col">Dados_Place_Holder</th>
+                                            <th scope="col">Dados_Place_Holder</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td data-label="Cliente">place_holder</td>
-                                            <td data-label="Assunto">place_holder</td>
-                                            <td data-label="Status">place_holder</td>
-                                            <td data-label="Data de Criação">place_holder</td>
-                                        </tr>                            
-                                    </tbody>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Cliente</th>
-                                            <th scope="col">Assunto</th>
-                                            <th scope="col">Status</th>                                    
-                                            <th scope="col">Data de Criação</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td data-label="Cliente">place_holder</td>
-                                            <td data-label="Assunto">place_holder</td>
-                                            <td data-label="Status">place_holder</td>
-                                            <td data-label="Data de Criação">place_holder</td>
-                                        </tr>                            
-                                    </tbody>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Cliente</th>
-                                            <th scope="col">Assunto</th>
-                                            <th scope="col">Status</th>                                    
-                                            <th scope="col">Data de Criação</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td data-label="Cliente">place_holder</td>
-                                            <td data-label="Assunto">place_holder</td>
-                                            <td data-label="Status">place_holder</td>
-                                            <td data-label="Data de Criação">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
                                         </tr>                            
                                     </tbody>
                                 </table>                        
@@ -95,55 +72,32 @@ const Dashboard = () => {
                         <div className="graph-content">
                             <span>Últimos 5 dias</span>
                         </div>
+                        <div className='table-title'>TESTE</div>
                         <div className='dashboard-table-wrapper'>
                             <div className="table-content dropShadow">
                                 <table className="table table-bordered ">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Cliente</th>
-                                            <th scope="col">Assunto</th>
-                                            <th scope="col">Status</th>                                    
-                                            <th scope="col">Data de Criação</th>
+                                            <th scope="col">Dados_Place_Holder</th>
+                                            <th scope="col">Dados_Place_Holder</th>
+                                            <th scope="col">Dados_Place_Holder</th>                                    
+                                            <th scope="col">Dados_Place_Holder</th>
+                                            <th scope="col">Dados_Place_Holder</th>
+                                            <th scope="col">Dados_Place_Holder</th>
+                                            <th scope="col">Dados_Place_Holder</th>
+                                            <th scope="col">Dados_Place_Holder</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td data-label="Cliente">place_holder</td>
-                                            <td data-label="Assunto">place_holder</td>
-                                            <td data-label="Status">place_holder</td>
-                                            <td data-label="Data de Criação">place_holder</td>
-                                        </tr>                            
-                                    </tbody>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Cliente</th>
-                                            <th scope="col">Assunto</th>
-                                            <th scope="col">Status</th>                                    
-                                            <th scope="col">Data de Criação</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td data-label="Cliente">place_holder</td>
-                                            <td data-label="Assunto">place_holder</td>
-                                            <td data-label="Status">place_holder</td>
-                                            <td data-label="Data de Criação">place_holder</td>
-                                        </tr>                            
-                                    </tbody>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Cliente</th>
-                                            <th scope="col">Assunto</th>
-                                            <th scope="col">Status</th>                                    
-                                            <th scope="col">Data de Criação</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td data-label="Cliente">place_holder</td>
-                                            <td data-label="Assunto">place_holder</td>
-                                            <td data-label="Status">place_holder</td>
-                                            <td data-label="Data de Criação">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
                                         </tr>                            
                                     </tbody>
                                 </table>                        

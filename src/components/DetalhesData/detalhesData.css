@@ -3,7 +3,7 @@
     height: 100%;
     text-align: left;
     padding: 5%;
-    border:solid red 1px;
+
 }
 
 .button-container{
@@ -19,6 +19,15 @@
 .valores-div{
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    transition: all 0.4s;
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+
+.valores-div:hover{
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 832px){
@@ -29,7 +38,6 @@
         height: 100%;
         text-align: left;
         padding: 5%;
-        border: solid red 1px;
         flex-wrap: wrap;
         align-content: space-around;
         justify-content: flex-start;

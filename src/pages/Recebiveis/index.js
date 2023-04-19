@@ -3,10 +3,11 @@ import { useState } from "react"
 import Header from "../../components/Header"
 
 import Calendar from "react-calendar"
-import ModalVendas from '../../components/ModalVendas'
 import DetalhesAdministradoras from "../../components/DetalhesAdministradoras"
 import DetalhesData from "../../components/DetalhesData"
 import Footer from "../../components/Footer"
+
+import { FiZoomIn } from "react-icons/fi"
 
 const Recebiveis = () => {
     const [date, setDate] = useState(new Date())
@@ -21,6 +22,274 @@ function convertDate(dateString) {
     const month = date.toLocaleString('pt-BR', { month: 'long' });
     const year = date.getFullYear();
     return `${dayOfWeek}, ${dayOfMonth} de ${month} de ${year}`;
+    }
+
+function voltar(){
+    toggleDetails()
+}
+
+    const RecebiveisDetalhes = () =>{
+        <div className='vendas-container'>
+                    <table className="modal-table table table-striped ">
+                        <thead>
+                            <tr>
+                                <th scope="col">Data e Hora</th>
+                                <th scope="col">Previsão de Pagamento</th>
+                                <th scope="col">Estabelecimento</th>
+                                <th scope="col">Bandeira</th>
+                                <th scope="col">Forma de Pagamento</th>
+                                <th scope="col">Valor da venda</th>
+                                <th scope="col">Valor descontado</th>
+                                <th scope="col">Valor Líquido da venda</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Data e Hora">place_holder</td>
+                                <td data-label="Previsão de pagamento">place_holder</td>
+                                <td data-label="Estabelecimento">place_holder</td>
+                                <td data-label="Bandeira">place_holder</td>
+                                <td data-label="Forma de Pagamento">place_holder</td>
+                                <td data-label="Valor da venda">place_holder</td>
+                                <td data-label="Valor descontado">place_holder</td>
+                                <td data-label="Valor Líquido da venda">place_holder</td>
+                                <td data-label="Status">place_holder</td>
+                                <td data-label="#"><button className='btn-details'><FiZoomIn/></button></td>
+                            </tr>
+                        </tbody>
+                </table>
+                <button type='button 'className='btn-header btn btn-primary btn-vendas' onClick={voltar}>Voltar</button>
+            </div>
     }
 
 function toggleDetails(){
@@ -40,10 +309,10 @@ function toggleDetails(){
                                 <div className='content-container'>
                                     <div className='content-header'>
                                         {showDetails ? <span className='title'>Quantidade de Vendas: </span> : <span className='title'>Calendário de Recebimentos</span>}
-                                        {showDetails ? <button type='button 'className='btn-header btn btn-primary btn-vendas' onClick={toggleDetails}>Voltar</button> : 'teste'}
+                                        {showDetails ? <button type='button 'className='btn-header btn btn-primary btn-vendas' onClick={toggleDetails}>Voltar</button> : ''}
                                     </div>
                                     <div className='content-body'>
-                                        { showDetails ? <ModalVendas/> : <Calendar onChange={toggleDetails} onClickDay={setDate} value={date}/>}
+                                        { showDetails ? RecebiveisDetalhes() : <Calendar onChange={toggleDetails} onClickDay={setDate} value={date}/>}
                                     </div>
                                 </div>
                                 <div className='content-container'>

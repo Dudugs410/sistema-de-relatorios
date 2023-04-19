@@ -5,7 +5,6 @@ import Footer from "../../components/Footer"
 import BuscarClienteData from "../../components/BuscarClienteData"
 
 import './antecipacoes.css'
-import '../../components/ModalVendas/modal.css'
 
 const Antecipacoes = () => {
 

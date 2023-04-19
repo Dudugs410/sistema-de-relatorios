@@ -15,6 +15,7 @@
     height: calc(100% - 144.77px - 144.77px);
     width: 100%;
     background-color: white;
+    padding: 15px;
 }
 
 .antecipacao-body>h1{

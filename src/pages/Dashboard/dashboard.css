@@ -1,13 +1,17 @@
-
+.main-wrapper{
+    height: 100%;
+    width: 100%;
+}
 
 .dashboard-content-wrapper{
     color: white;
     display: flex;
-    height: 100%;
+    height: 96%;
     width: 100%;
     flex-direction: row;
-    align-items: flex-start;
     overflow-y: hidden;
+    flex-wrap: wrap;
+
 }
 
 .dashboard-content{
@@ -20,20 +24,16 @@
 }
 
 .dashboard-graph-wrapper{
-    width: 100%;
-    height: 80%;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-left: 2px;
-    padding-right: 2px;
+    width: 50%;
     
 }
 
 .graph-content{
-    text-align: center;
     background-color: rgba(0,0,0,0.5);
     height: 100%;
+    width: 100%;
+    text-align: center;
+
 }
 
 .graph-table{
@@ -49,61 +49,32 @@
 
 .dashboard-table-wrapper{
     background-color: white;
+    height: 400px;
     width: 100%;
-    margin-top: 40px;
     overflow-y: scroll;
+    overflow-x: scroll;
+    border: solid black 2px;
 
 }
 
-table{
-    border:0;
-    background-color: white;
-    width: 100%;
-  };
-
-  table caption{
-    font-size: 1.3em;
-  }
-
-  table thead{
-    border:none;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-
-  table tr{
-    border-bottom: 3px solid black;
-    display: block;
-    margin-bottom: 0.60em;
-  }
-
-  table td{
-    border-bottom: 1px solid black;
-    display: block;
-    font-size: 0.8em;
-    text-align: right;
-  }
-
-  table td::before{
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+.table-title{
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+}
 
 @media screen and (max-width: 832px){
 
     .dashboard-content-wrapper{
-        width: 100%;
-        height: 100%;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      width: 100%;
+      height: 96%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
     }
     
     .dashboard-content{
@@ -115,7 +86,7 @@ table{
     
     .dashboard-graph-wrapper{
         width: 100%;
-        height: 800px;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -136,10 +107,11 @@ table{
     }
     
     .dashboard-table-wrapper{
-        background-color: white;
-        width: 100%;
-        margin-top: 40px;
-    
+      background-color: white;
+      height: 100%;
+      width: 100%;
+      overflow-y: scroll;
+      border: solid black 2px;
     }
 
     .graph-table{
