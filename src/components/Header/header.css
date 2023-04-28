@@ -181,6 +181,8 @@ polyline, line, path{
     .btn-exit{
         text-align: center;
         align-self: end;
+        position: relative;
+        top: -90px;
 
     }
 

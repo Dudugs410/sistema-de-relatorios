@@ -120,6 +120,11 @@
         height: 100%;
         width: 100%;
     }
+
+    canvas{
+      height:10%;
+      width:10%;
+    }
     
     table{
         border:0;
