@@ -31,10 +31,10 @@ function convertDate(dateString) {
   }
 
 function toggleDetails(){
-    console.log('foi')
+    console.log('toggleDetails()')
     // eslint-disable-next-line no-unused-expressions
     setShowDetails(!showDetails)
-    console.log(showDetails)
+    console.log('showDetails Depois: ' + showDetails)
     
 }
 
@@ -64,7 +64,6 @@ function pesquisaPeriodo(){
 }
 
 const Vendas = () =>{
-    console.log(showDetails)
     return(
         <div className='vendas-container'>
                 <table className="modal-table table table-striped ">
@@ -128,7 +127,7 @@ const Periodo = () =>{
                                 <div className='content-container'>
                                     <div className='content-header'>
                                         { showDetails ? <span className='title'>Quantidade de Vendas: </span> : <span className='title'>Calendário de Vendas</span>}
-                                        { showDetails ? <span>teste</span> : Periodo()}
+                                        { showDetails ? <span></span> : Periodo()}
                                     </div>
                                     <div className='content-body'>
                                         { showDetails ? Vendas() : <Calendar onChange={toggleDetails} onClickDay={setDate} value={date}/>}

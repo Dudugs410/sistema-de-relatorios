@@ -72,8 +72,12 @@ li:hover{
 
 .btn-exit{
     text-align: center;
-    align-self: end;
-    background-color: yellowgreen;
+    align-self: start;
+    background-color: red;
+    border-radius: 6px;
+    border: solid white 1px;
+    margin-top: 2px;
+    margin-right: 2px;
 }
 
 svg{

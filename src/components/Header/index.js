@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
-import { FiLogOut } from "react-icons/fi"
+import { FiPower } from "react-icons/fi"
 
 import './header.css'
 import '../../pages/Vendas/vendas.css'
@@ -29,7 +29,7 @@ const Header = () =>{
                         <span className='client-code'>123456789101112</span> 
                     </div>              
                 </div>
-                <button type='button' className='btn-exit' onClick={logout}><FiLogOut color="#000000" size={24}/></button>
+                <button type='button' className='btn-exit' onClick={logout}><FiPower color="#000000" size={24}/></button>
             </div>
             
             <div className='header-content drop-shadow'>

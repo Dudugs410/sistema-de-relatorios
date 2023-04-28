@@ -7,16 +7,7 @@ import { useState, useEffect } from "react"
 import api from "../../services/api"
 
 const Dashboard = () => {
-    const [adquirentes, setAdq] = useState([])
 
-    useEffect(() => {
-        const loadAdquirentes = async () => {
-        const result = await api.get('/adquirente', {headers: { Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTYWx2YWx1Y3JvU2VydmljZUFjZXNzVG9rZW4iLCJqdGkiOiIyMzVjZWE0Ny1iNTFmLTRlMzUtOGUwNC1mMDljYTk4NWJlYjIiLCJpYXQiOiIxMS8wNC8yMDIzIDE2OjU1OjA4IiwiaWQiOiIxNjQzODUiLCJsb2dpbiI6IkFMRlJFRE8iLCJleHAiOjE2ODEyMzkzMDgsImlzcyI6IlNhbHZhbHVyb0F1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiU2FsdmFsdWNyb1NlcnZpY2VDbGllbnQifQ.Fvz_lA82SpYeqq9UJxXJL1gZcqT-BIVxqZO8eeDLcyY'}})
-        console.log(result)
-        setAdq(result.data)
-        }
-        loadAdquirentes()
-    })
 
     
   
@@ -61,6 +52,78 @@ const Dashboard = () => {
                                             <td data-label="Dado_Place_Holder">place_holder</td>
                                         </tr>                            
                                     </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
                                 </table>                        
                             </div>
                         </div>
@@ -88,6 +151,90 @@ const Dashboard = () => {
                                             <th scope="col">Dados_Place_Holder</th>
                                         </tr>
                                     </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                            <td data-label="Dado_Place_Holder">place_holder</td>
+                                        </tr>                            
+                                    </tbody>
                                     <tbody>
                                         <tr>
                                             <td data-label="Dado_Place_Holder">place_holder</td>
