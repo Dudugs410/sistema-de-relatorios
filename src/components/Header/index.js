@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom"
 import { FiPower } from "react-icons/fi"
 
+import Cookies from "js-cookie"
+
 import './header.css'
 import '../../pages/Vendas/vendas.css'
 
@@ -9,6 +11,8 @@ const Header = () =>{
 
 
     function logout(){
+        Cookies.remove('token')
+        console.log(Cookies.get('token'))
         navigate('/')
     }
 

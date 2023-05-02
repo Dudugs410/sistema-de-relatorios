@@ -179,6 +179,7 @@ polyline, line, path{
     }
 
     .btn-exit{
+        cursor: pointer;
         text-align: center;
         align-self: end;
         position: relative;

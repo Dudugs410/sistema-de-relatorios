@@ -54,7 +54,7 @@ const Dashboard = () => {
                     <div className='graph-table'>
                         <div className="graph-content">
                             <span>Últimos 5 dias</span>
-                            <Pie data={dados5Dias}/>
+                            <Pie data={dados5Dias} options={{radius: "70%"}}/>
                         </div>
                         <div className='table-title'>TESTE</div>
                         <div className='dashboard-table-wrapper'>
@@ -166,7 +166,7 @@ const Dashboard = () => {
                     <div className='graph-table'>
                         <div className="graph-content">
                             <span>Dia Atual</span>
-                            <Pie data={dadosDiaAtual}/>
+                            <Pie data={dadosDiaAtual} options={{radius: "70%"}}/>
                         </div>
                         <div className='table-title'>TESTE</div>
                         <div className='dashboard-table-wrapper'>

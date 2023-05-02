@@ -6,7 +6,7 @@ function TesteGrafico({ clientes }) {
   // Dados de vendas dos últimos 5 dias
   const dados5Dias = {
     labels: ["Dia 1", "Dia 2", "Dia 3", "Dia 4", "Dia 5"],
-    datasets: clientes.map((cliente) => ({
+    datasets: clientes[0].vendas.map((cliente) => ({
       label: cliente.nome,
       data: cliente.vendas.slice(0, 5),
       fill: false,
