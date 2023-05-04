@@ -10,7 +10,7 @@ export const clienteVendas = [
             67.98,
             102.12,
         ],
-        cor: '#00008B'
+        cor: '#00008B' //azul
     },
 
     {
@@ -23,7 +23,7 @@ export const clienteVendas = [
             33.98,
             52.12,
         ],
-        cor: '#3CB371'
+        cor: '#3CB371' //verde
     },
 
     {
@@ -36,7 +36,7 @@ export const clienteVendas = [
             99.98,
             158.12,
         ],
-        cor: '#DAA520'
+        cor: '#DAA520' //amarelo
     },
 
     {
@@ -49,7 +49,7 @@ export const clienteVendas = [
             29.98,
             9.80,
         ],
-        cor: '#4B0082'
+        cor: '#4B0082' //roxo
     },
 
     {
@@ -62,6 +62,6 @@ export const clienteVendas = [
             70.98,
             259.99,
         ],
-        cor: '#FF00FF'
+        cor: '#FF00FF' //rosa
     }
 ]

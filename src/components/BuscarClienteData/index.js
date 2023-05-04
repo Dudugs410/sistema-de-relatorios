@@ -14,15 +14,14 @@ const BuscarClienteData = () => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        const loadAdquirentes = async () =>{
+        const loadBandeiras = async () =>{
           const result = await api.get('/bandeira', config(Cookies.get('token')))
           console.log(result)
           setBAN(result.data)
           setLoading(false)
         }
-        loadAdquirentes()
-        console.log(BAN)
-      }, [BAN])
+        loadBandeiras()
+      }, [])
 
     function buscar(){
         if(dataFinal < dataInicial){

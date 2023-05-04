@@ -16,6 +16,10 @@ const Header = () =>{
         navigate('/')
     }
 
+    function token(){
+        console.log(Cookies.get('token'))
+    }
+
     return(
         <>
             <div className='header-bg'>
@@ -34,6 +38,7 @@ const Header = () =>{
                     </div>              
                 </div>
                 <button type='button' className='btn-exit' onClick={logout}><FiPower color="#000000" size={24}/></button>
+                <button type='button' className='btn-secondary' onClick={token}>access token</button>
             </div>
             
             <div className='header-content drop-shadow'>

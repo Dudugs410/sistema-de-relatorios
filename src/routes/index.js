@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
+import Private from "./Private";
 
 import Login from '../pages/Login'
 import Dashboard from '../pages/Dashboard'
@@ -13,11 +14,11 @@ function RoutesApp(){
     return(
         <Routes>
             <Route path='/' element = {<Login/>}/>
-            <Route path='/dashboard' element = { <Dashboard/>}/>
-            <Route path='/vendas' element = { <Vendas/> } />
-            <Route path='/recebiveis' element = { <Recebiveis/> } />
-            <Route path='/antecipacoes' element = { <Antecipacoes/> } />
-            <Route path='/servicos' element = { <Servicos/> } />
+            <Route path='/dashboard' element = { <Private><Dashboard/></Private>}/>
+            <Route path='/vendas' element = { <Private><Vendas/></Private> } />
+            <Route path='/recebiveis' element = { <Private><Recebiveis/></Private> } />
+            <Route path='/antecipacoes' element = { <Private><Antecipacoes/></Private> } />
+            <Route path='/servicos' element = { <Private><Servicos/></Private> } />
         </Routes>
     )  
 }
