@@ -7,9 +7,10 @@ import { useState, useEffect } from "react"
 import api from "../../services/api"
 
 //////
-import { cliente } from "../../resources/teste"
+import { clienteVendas } from "../../resources/teste"
 import { Pie } from "react-chartjs-2"
 import { Chart, ArcElement} from 'chart.js'
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 Chart.register(ArcElement);
 //////
 
@@ -17,27 +18,46 @@ const Dashboard = () => {
 
     /////TESTE DO GRÁFICO//////
     // Dados de vendas dos últimos 5 dias
+
+    const lastFiveDaysSales = 
+    clienteVendas
+    .slice(-5)
+    .map((vendas) => vendas.vendas.reduce((a, b) => a + b, 0));
+
   const dados5Dias = {
-    labels: ["Dia 1", "Dia 2", "Dia 3", "Dia 4", "Dia 5"],
-    datasets: cliente.map((cliente) => ({
-      label: cliente.nome,
-      data: cliente.vendas.slice(0, 5),
-      fill: false,
-      backgroundColor: cliente.cor,
-      tension: 0.1,
-    })),
+    labels: [],
+    datasets: [
+      {
+        data: lastFiveDaysSales,
+        backgroundColor: clienteVendas.slice(-5).map((vendas) => vendas.cor),
+      },
+    ],
   };
 
   // Dados de vendas do dia atual
   const dadosDiaAtual = {
-    labels: cliente.map((cliente) => cliente.nome),
+    labels: clienteVendas[0].vendas.map((clienteVendas) => clienteVendas.dia),
     datasets: [
       {
         label: "Vendas do Dia Atual",
-        data: cliente.map((cliente) => cliente.vendas[4]),
-        backgroundColor: cliente.map((cliente) => cliente.cor),
+        data: clienteVendas[0].vendas,
+        backgroundColor: clienteVendas.map((clienteVendas) => clienteVendas.cor),
       },
     ],
+  };
+
+  const pieOptions = {
+    radius: "70%",
+    plugins:{
+        datalabels:{
+            color: 'white',
+            font:{
+                size: '14px',
+                weight: 'bold',
+            }
+        }
+    }
+
   };
     ///////////////////////////
 
@@ -54,7 +74,7 @@ const Dashboard = () => {
                     <div className='graph-table'>
                         <div className="graph-content">
                             <span>Últimos 5 dias</span>
-                            <Pie data={dados5Dias} options={{radius: "70%"}}/>
+                            <Pie data={dados5Dias} options={pieOptions} plugins={[ChartDataLabels]}/>
                         </div>
                         <div className='table-title'>TESTE</div>
                         <div className='dashboard-table-wrapper'>
@@ -166,7 +186,7 @@ const Dashboard = () => {
                     <div className='graph-table'>
                         <div className="graph-content">
                             <span>Dia Atual</span>
-                            <Pie data={dadosDiaAtual} options={{radius: "70%"}}/>
+                            <Pie data={dadosDiaAtual} options={pieOptions} plugins={[ChartDataLabels]}/>
                         </div>
                         <div className='table-title'>TESTE</div>
                         <div className='dashboard-table-wrapper'>

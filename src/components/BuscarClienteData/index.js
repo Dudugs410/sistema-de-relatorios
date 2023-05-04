@@ -1,15 +1,28 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import DateRange from "../DateRange"
+import Cookies from "js-cookie"
 
-import { BAN } from "../../resources/bandeiras"
+import api, { config } from "../../services/api"
 
 import './buscar.css'
 
 const BuscarClienteData = () => {
 
-
     const [dataInicial, setDataInicial] = useState('')
     const [dataFinal, setDataFinal] = useState('')
+    const [BAN, setBAN] = useState([])
+    const [loading, setLoading] = useState(false)
+
+    useEffect(() => {
+        const loadAdquirentes = async () =>{
+          const result = await api.get('/bandeira', config(Cookies.get('token')))
+          console.log(result)
+          setBAN(result.data)
+          setLoading(false)
+        }
+        loadAdquirentes()
+        console.log(BAN)
+      }, [BAN])
 
     function buscar(){
         if(dataFinal < dataInicial){
