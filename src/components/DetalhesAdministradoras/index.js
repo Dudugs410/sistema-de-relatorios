@@ -4,34 +4,47 @@ import '../DetalhesData/detalhesData.css'
 import { config } from '../../services/api'
 import api from '../../services/api'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { DateContext } from '../../contexts/date'
 import Cookies from 'js-cookie'
 
 const DetalhesAdministradoras = ({close}) =>{
     const [total, setTotal] = useState(0.00)
     const [detalhes, setDetalhes] = useState(false)
     const [ADQ, setADQ] = useState([])
+    const [ADQdata, setADQdata] = useState([])
+    const [selecionada, setSelecionada] = useState([])
     const [loading, setLoading] = useState(false)
 
+    const { dataInicial } = useContext(DateContext)
+    const { dataFinal } = useContext(DateContext)
+
     useEffect(() => {
-        const loadAdquirentes = async () =>{
-          const result = await api.get('/adquirente', config(Cookies.get('token')))
-          console.log(result)
-          setADQ(result.data)
-          setLoading(false)
+        const loadTotalVendas = async () =>{
+            console.log('loadTotalVendas()')
+            const body = 
+            {
+                "cnpj" : "03.953.552/0001-02",
+                "dataInicial": dataInicial,
+                "dataFinal": dataFinal,
+            }  
+            const response = 
+            await api.get('/vendas',
+            {  
+                data: body, ...config(Cookies.get('token'))
+            }, 
+            )
+            console.log(response)
+            setLoading(false)
+            setADQ(response.data)
         }
-        loadAdquirentes()
-        console.log(ADQ)
-      }, [ADQ])
+        loadTotalVendas()
+      }, [dataFinal, dataInicial])
 
     function clicou(administradora){
         console.log('mostrar detalhes da administradora ' + administradora.NOME)
         console.log(administradora)
         setDetalhes(true)
-    }
-
-    function showAdmList(){
-        setDetalhes(false)
     }
 
     return(
@@ -70,90 +83,6 @@ const DetalhesAdministradoras = ({close}) =>{
                                                 <th scope="col">Dados_Place_Holder</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                            </tr>                            
-                                        </tbody>
-                                        <tbody>
-                                            <tr>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                            </tr>                            
-                                        </tbody>
-                                        <tbody>
-                                            <tr>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                            </tr>                            
-                                        </tbody>
-                                        <tbody>
-                                            <tr>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                            </tr>                            
-                                        </tbody>
-                                        <tbody>
-                                            <tr>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                            </tr>                            
-                                        </tbody>
-                                        <tbody>
-                                            <tr>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                            </tr>                            
-                                        </tbody>
-                                        <tbody>
-                                            <tr>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                                <td data-label="Dado_Place_Holder">place_holder</td>
-                                            </tr>                            
-                                        </tbody>
                                         <tbody>
                                             <tr>
                                                 <td data-label="Dado_Place_Holder">place_holder</td>

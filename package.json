@@ -12,6 +12,7 @@
     "chart.js": "^4.3.0",
     "chartjs-plugin-datalabels": "^2.2.0",
     "js-cookie": "^3.0.5",
+    "jsonwebtoken": "^9.0.0",
     "jwt-decode": "^3.1.2",
     "md5": "^2.3.0",
     "moment": "^2.29.4",

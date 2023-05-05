@@ -4,8 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 import './date-picker.css'
 
 function DateRangePicker() {
-  const [startDate, setStartDate] = useState(null)
-  const [endDate, setEndDate] = useState(null)
+  
 
   const handleStartDateChange = date => {
     setStartDate(date)

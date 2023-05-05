@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Cookies from "js-cookie"
 
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"

@@ -1,9 +1,10 @@
 import { React, useContext } from 'react'
 import { Navigate } from 'react-router-dom'
 import { AuthContext } from '../contexts/auth'
+import Cookies from 'js-cookie'
 
 export default function Private({children}){
-  const { signed, loading } = useContext(AuthContext)
+  const { isSignedIn, loading } = useContext(AuthContext)
 
   if(loading){
     return(
@@ -11,7 +12,8 @@ export default function Private({children}){
     )
   }
 
-  if(!signed){
+  if(!isSignedIn || Cookies.get('token') === undefined){
+    Cookies.remove('token')
     return <Navigate to="/"/>
   }
 

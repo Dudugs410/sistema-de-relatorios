@@ -3,9 +3,6 @@ import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 import './dashboard.css'
 
-import { useState, useEffect } from "react"
-import api from "../../services/api"
-
 //////
 import { clienteVendas } from "../../resources/teste"
 import { Pie } from "react-chartjs-2"
