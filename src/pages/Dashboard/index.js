@@ -2,20 +2,30 @@
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 import './dashboard.css'
-
+//////
+import Cookies from "js-cookie"
+//////
+import { useContext, useEffect } from "react"
+import { AuthContext } from "../../contexts/auth"
 //////
 import { clienteVendas } from "../../resources/teste"
 import { Pie } from "react-chartjs-2"
 import { Chart, ArcElement} from 'chart.js'
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 Chart.register(ArcElement);
-//////
 
 const Dashboard = () => {
+    console.log('Dashboard')
+    const { isSignedIn, setIsSignedIn, accessToken, setAccessToken } = useContext(AuthContext)
 
+    useEffect(() => {
+        setIsSignedIn(sessionStorage.getItem('isSignedIn'))
+        setAccessToken(Cookies.get('token'))
+
+    })
+    
     /////TESTE DO GRÁFICO//////
     // Dados de vendas dos últimos 5 dias
-
     const lastFiveDaysSales = 
     clienteVendas
     .slice(-5)

@@ -13,8 +13,8 @@ const Login = () => {
     const { userPw } = useContext(AuthContext)
     const { setUserPw } = useContext(AuthContext)
     const { isSignedIn } = useContext(AuthContext)
+    const { accessToken } = useContext(AuthContext)
     const navigate = useNavigate()
-
 
     useEffect(()=>{
         if(isSignedIn){

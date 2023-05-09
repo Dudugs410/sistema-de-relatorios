@@ -1,49 +1,59 @@
-import { React, createContext, useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { React, createContext, useState } from 'react'
 
 import Cookies from 'js-cookie'
-import api, { config } from '../services/api'
+import api from '../services/api'
 
 import md5 from 'md5'
-
 
 export const AuthContext = createContext({})
 
 function AuthProvider({ children }){
-  const [isSignedIn, setIsSignedIn] = useState(null)
+  const [isSignedIn, setIsSignedIn] = useState(false)
   const [userLogin, setUserLogin] = useState('')
   const [userPw, setUserPw] = useState('')
   const [userData, setUserData] = useState({})
-
   const [loading, setLoading] = useState(false)
+  const [accessToken, setAccessToken] = useState(undefined)
 
-  const navigate = useNavigate()
- 
-  useEffect(()=>{
-    if(Cookies.get('token'))
-    api.get('/usuario', config(Cookies.get('token')))
-    .then(response => {
-        console.log(response)
-  })
-},[])
+  console.log('auth.js')
 
-  /////Verificar se o access token ainda é válido
-  
+  /////API de vendas
+/*  
 useEffect(()=>{
     if(isSignedIn)
-    api.get('/vendas', {
-            data:{
-              cnpj : "03.953.552/0001-02",
-              dataInicial:"2023-04-01",
-              dataFinal: "2023-04-10",
-              ...config(Cookies.get('token'))
-            }
-        })
-        .then(response =>{
-          console.log(response)
-        })
-})
+    {
+      console.log('GET API de vendas')
+      api.get('/vendas', {
+        params:{
+          cnpj : "03.953.552/0001-02",
+          dataInicial:"2023-04-01",
+          dataFinal: "2023-04-10",
+          acess_token: accessToken
+        }
+      })
+      .then(response =>{
+        console.log(response)
+      })
+    }
+    
+},[accessToken, isSignedIn])
+*/
 
+/*useEffect(()=>{
+    if(isSignedIn){
+        axios.get('https://app.salvalucro.com.br/api/v1/vendas', {
+          data:{
+            cnpj : "03.953.552/0001-02",
+            dataInicial:"2023-04-01",
+            dataFinal: "2023-04-10",
+            ...config(Cookies.get('token'))
+          }
+      })
+      .then(response =>{
+        console.log(response)
+      })
+    } 
+})*/
 
   /////Login do usuário
 
@@ -58,10 +68,13 @@ useEffect(()=>{
         console.log('response: ')
         console.log(response.data)
         Cookies.set('token', response.data.acess_token)
-        console.log('token guardada nos Cookies: ' + Cookies.get('token'))
+        setUserData(response.data)
+        setAccessToken(Cookies.get('token'))
         if(response.data.sucess === true){
-            setIsSignedIn(true)
-            navigate('/Dashboard')
+          sessionStorage.setItem('isSignedIn', true)  
+          sessionStorage.setItem('userData', userData)
+          setIsSignedIn(true)
+            
         }
     })
     .catch(error =>{
@@ -78,6 +91,9 @@ useEffect(()=>{
   function logout(){
     console.log('logout()')
     setIsSignedIn(false)
+    setUserData(undefined)
+    Cookies.remove('token')
+    sessionStorage.clear()
     console.log('************fim logout()************')
   }
 
@@ -86,7 +102,9 @@ useEffect(()=>{
   return(
     <AuthContext.Provider 
       value={{
+        signed: !!userData,
         isSignedIn,
+        setIsSignedIn,
         userLogin,
         setUserLogin,
         userPw,
@@ -96,6 +114,8 @@ useEffect(()=>{
         submitLogin,
         logout,
         userData,
+        accessToken,
+        setAccessToken,
       }}
     >
       {children}

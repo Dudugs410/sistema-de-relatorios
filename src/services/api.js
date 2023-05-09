@@ -1,7 +1,9 @@
 import axios from 'axios'
 
 export function config(accessToken){
-    const config = { headers:{ Authorization:`Bearer ${accessToken}`} }
+    const config = { headers:{ 
+        Authorization:`Bearer ${accessToken}`,
+        'Content-Type': 'application/json'} }
     return config
 
 }

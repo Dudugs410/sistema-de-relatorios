@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom"
 import { FiPower } from "react-icons/fi"
 import { AuthContext } from "../../contexts/auth"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import Cookies from "js-cookie"
 
 import './header.css'
@@ -9,7 +9,11 @@ import '../../pages/Vendas/vendas.css'
 
 const Header = () =>{
 
-    const { logout, accessToken } = useContext(AuthContext)
+    const { logout, accessToken, isSignedIn } = useContext(AuthContext)
+
+    useEffect(() => {
+        
+    })
 
     return(
         <>
@@ -29,7 +33,7 @@ const Header = () =>{
                     </div>              
                 </div>
                 <button type='button' className='btn-exit' onClick={logout}><FiPower color="#000000" size={24}/></button>
-                <button type='button' className='btn-secondary' onClick={() => {console.log(accessToken)}}>access token</button>
+                <button type='button' className='btn-secondary' onClick={() => {console.log('isSignedIn: ' + isSignedIn + '////' + 'Cookies: ' + Cookies.get('token') + '////' + 'accessToken: ' + accessToken )}}>access token</button>
             </div>
             
             <div className='header-content drop-shadow'>

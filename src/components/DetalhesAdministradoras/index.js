@@ -7,43 +7,32 @@ import api from '../../services/api'
 import { useState, useEffect, useContext } from 'react'
 import { DateContext } from '../../contexts/date'
 import Cookies from 'js-cookie'
+import { AuthContext } from '../../contexts/auth'
 
 const DetalhesAdministradoras = ({close}) =>{
     const [total, setTotal] = useState(0.00)
     const [detalhes, setDetalhes] = useState(false)
-    const [ADQ, setADQ] = useState([])
-    const [ADQdata, setADQdata] = useState([])
     const [selecionada, setSelecionada] = useState([])
     const [loading, setLoading] = useState(false)
-
+    const [ADQ, setADQ] = useState([])
     const { dataInicial } = useContext(DateContext)
     const { dataFinal } = useContext(DateContext)
+    const { accessToken } = useContext(AuthContext)
 
     useEffect(() => {
-        const loadTotalVendas = async () =>{
-            console.log('loadTotalVendas()')
-            const body = 
-            {
-                "cnpj" : "03.953.552/0001-02",
-                "dataInicial": dataInicial,
-                "dataFinal": dataFinal,
-            }  
-            const response = 
-            await api.get('/vendas',
-            {  
-                data: body, ...config(Cookies.get('token'))
-            }, 
-            )
-            console.log(response)
-            setLoading(false)
+        const loadADQ = async () =>{
+            const response = await api.get('adquirente', config(accessToken))
             setADQ(response.data)
         }
-        loadTotalVendas()
-      }, [dataFinal, dataInicial])
+        loadADQ()
+      },[accessToken, loading])
 
-    function clicou(administradora){
+    async function clicou(administradora){
+        setLoading(true)
         console.log('mostrar detalhes da administradora ' + administradora.NOME)
         console.log(administradora)
+        setSelecionada(administradora)
+        console.log('selecionada: ' + administradora.NOME)
         setDetalhes(true)
     }
 
