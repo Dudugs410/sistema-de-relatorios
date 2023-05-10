@@ -71,7 +71,6 @@ const Dashboard = () => {
 
   return(
     <div className='page'>
-        <Header/>
         <div className='main-wrapper'>
             <div className='dashboard-content'>
                 Conteúdo(vendas, grafico, etc)
@@ -314,7 +313,6 @@ const Dashboard = () => {
                 </div>
             </div>
         </div>
-        <Footer/>
     </div>
   )  
 

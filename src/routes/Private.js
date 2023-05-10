@@ -7,7 +7,7 @@ import LoadingModal from '../components/LoadingModal'
 
 export default function Private({children}){
 
-  const { signed, isSignedIn, setIsSignedIn, setAccessToken, loading, setLoading } = useContext(AuthContext)
+  const { signed, isSignedIn, accessToken, setIsSignedIn, setAccessToken, loading, setLoading, setUserData } = useContext(AuthContext)
 
   console.log('Private.js')
 
@@ -26,6 +26,8 @@ export default function Private({children}){
   }
 
   if(!signed){
+    sessionStorage.clear()
+    Cookies.remove('token')
     return <Navigate to="/"/>
   }
 

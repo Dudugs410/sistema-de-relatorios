@@ -1,4 +1,4 @@
-const Recebiveis = () =>{
+const Relatorios = () =>{
     return(
         <div className='page'>
         
@@ -6,4 +6,4 @@ const Recebiveis = () =>{
     )
 }
 
-export default Recebiveis
+export default Relatorios

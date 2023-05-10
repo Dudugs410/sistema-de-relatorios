@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
+import Layout from "../components/Layout";
 import Private from "./Private";
-import DateProvider from "../contexts/date";
 
 import Login from '../pages/Login'
 import Dashboard from '../pages/Dashboard'
@@ -13,14 +13,16 @@ import Servicos from "../pages/Servicos";
 
 function RoutesApp(){
     return(
+    <Layout>
         <Routes>
             <Route path='/' element = {<Login/>}/>
-            <Route path='/dashboard' element = { <Private><DateProvider><Dashboard/></DateProvider></Private>}/>
-            <Route path='/vendas' element = { <Private><DateProvider><Vendas/></DateProvider></Private> } />
-            <Route path='/recebiveis' element = { <Private><DateProvider><Recebiveis/></DateProvider></Private> } />
-            <Route path='/antecipacoes' element = { <Private><DateProvider><Antecipacoes/></DateProvider></Private> } />
-            <Route path='/servicos' element = { <Private><DateProvider><Servicos/></DateProvider></Private> } />
+            <Route path='/dashboard' element = { <Private><Dashboard/></Private>}/>
+            <Route path='/vendas' element = { <Private><Vendas/></Private> } />
+            <Route path='/recebiveis' element = { <Private><Recebiveis/></Private> } />
+            <Route path='/antecipacoes' element = { <Private><Antecipacoes/></Private> } />
+            <Route path='/servicos' element = { <Private><Servicos/></Private> } />
         </Routes>
+    </Layout>
     )  
 }
 

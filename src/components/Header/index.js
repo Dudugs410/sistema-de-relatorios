@@ -5,7 +5,6 @@ import { useContext, useEffect } from "react"
 import Cookies from "js-cookie"
 
 import './header.css'
-import '../../pages/Vendas/vendas.css'
 
 const Header = () =>{
 

@@ -1,12 +1,6 @@
 html, body, .app, #root{
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-h1, h2, h3, h4, h5{
-  margin: 0;
 }
 
 body{
@@ -41,26 +35,5 @@ li, ul{
 .drop-shadow{
   max-width: 100%;
   filter: drop-shadow(5px 5px 10px #000);
-}
-
-.page{
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-.loading{
-  display: flex;
-  flex-direction: column;
-  border: solid white 5px;
-  border-radius: 10px;
-  padding: 10px;
-  color: white;
-  font-weight: bold;
-  align-items: center;
-  margin-top: 40%;
-  background-color: rgba(0,0,0,.7);
-  width: 40%;
-  margin-left: 30%;
-  margin-right: 30%;
 }
 

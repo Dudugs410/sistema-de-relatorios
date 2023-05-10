@@ -1,4 +1,4 @@
-import { React, createContext, useState } from 'react'
+import { React, createContext, useState, useEffect } from 'react'
 
 import Cookies from 'js-cookie'
 import api from '../services/api'
@@ -114,6 +114,7 @@ useEffect(()=>{
         submitLogin,
         logout,
         userData,
+        setUserData,
         accessToken,
         setAccessToken,
       }}
