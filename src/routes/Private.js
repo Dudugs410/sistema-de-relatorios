@@ -3,6 +3,7 @@ import { Navigate } from 'react-router-dom'
 import { AuthContext } from '../contexts/auth'
 import Cookies from 'js-cookie'
 
+import Layout from '../components/Layout'
 import LoadingModal from '../components/LoadingModal'
 
 export default function Private({children}){
@@ -31,5 +32,7 @@ export default function Private({children}){
     return <Navigate to="/"/>
   }
 
-  return children
+  
+  return (
+    <Layout>{ children }</Layout>)
 }

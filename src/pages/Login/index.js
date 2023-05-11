@@ -23,7 +23,7 @@ const Login = () => {
     },[isSignedIn, navigate])
 
     return(
-        <div className='page'>
+        <div className='appPage'>
             <div className='body-login'>  
                 <div className='bg-login'>
                 </div>

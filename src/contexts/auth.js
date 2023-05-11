@@ -1,7 +1,7 @@
 import { React, createContext, useState, useEffect } from 'react'
 
 import Cookies from 'js-cookie'
-import api from '../services/api'
+import api, { config } from '../services/api'
 
 import md5 from 'md5'
 
@@ -14,9 +14,22 @@ function AuthProvider({ children }){
   const [userData, setUserData] = useState({})
   const [loading, setLoading] = useState(false)
   const [accessToken, setAccessToken] = useState(undefined)
+  const [users, setUsers] = useState({})
 
   console.log('auth.js')
 
+useEffect(() =>{
+  setIsSignedIn(sessionStorage.getItem('isLoggedIn'))
+},[])
+
+useEffect(() => {
+  async function loadUsers(){
+    const usu = await api.get('/usuario', config(accessToken))
+    console.log(users.data)
+    setUsers(usu.data)
+  }
+  loadUsers()
+},[])
   /////API de vendas
 /*  
 useEffect(()=>{
@@ -57,24 +70,30 @@ useEffect(()=>{
 
   /////Login do usuário
 
+
   async function submitLogin(e){
     e.preventDefault()
     console.log(loading)
     setLoading(true)
     console.log('submitLogin: usuario:' + userLogin +' password:' + userPw)
     console.log('pw md5: ' + md5(userPw))
-    api.post('/token', { client_id: userLogin, client_secret: md5(userPw) })
+    await api.post('/token', { client_id: userLogin, client_secret: md5(userPw) })
     .then(response => {
         console.log('response: ')
         console.log(response.data)
         Cookies.set('token', response.data.acess_token)
         setUserData(response.data)
         setAccessToken(Cookies.get('token'))
+        console.log('sucess: ' + response.data.sucess)
+        
         if(response.data.sucess === true){
-          sessionStorage.setItem('isSignedIn', true)  
-          sessionStorage.setItem('userData', userData)
-          setIsSignedIn(true)
-            
+          console.log('////////////////////////////////')
+          sessionStorage.setItem('isSignedIn', true)
+          sessionStorage.setItem('userData', JSON.stringify(userData))
+          console.log(sessionStorage.getItem('userData'))
+          console.log(isSignedIn)
+          console.log('//////////////////////////////////')
+          setIsSignedIn(true)  
         }
     })
     .catch(error =>{

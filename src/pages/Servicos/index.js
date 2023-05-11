@@ -1,7 +1,7 @@
 const Servicos = () =>{
     return(
-        <div className='page'>
-        
+        <div className='appPage'>
+
         </div>
     )
 }

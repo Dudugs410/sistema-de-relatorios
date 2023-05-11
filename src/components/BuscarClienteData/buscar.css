@@ -10,7 +10,6 @@
 
 .date-container{
     width: 100%;
-    align-self: center;
     display: inline-flex;
     justify-content: space-evenly;
     background-color: rgba(0,0,0,0.5);
@@ -29,18 +28,21 @@
 }
 
 .date-picker{
-
+    
     text-align: center;
     display: flex;
     border-radius: 10px;
     height:2.2em;
     width: 80%;
+    font-style: italic;
+    color: gray;
 }
 
 .date-container>.date-column>input{
     height: 2.2em;
     border-radius: 10px;
     width: 80%;
+    
 }
 
 .date-container>.date-column>span{
@@ -49,6 +51,7 @@
     justify-content: center;
 
     font-weight: bold;
+    
 }
 
 .date-container>.date-column>select{
@@ -56,6 +59,7 @@
     height: 2.2em;
     text-align: center;
     width: 80%;
+    font-style: italic;
 }
 
 .date-column>.select-card>select{
@@ -64,11 +68,14 @@
     border-radius: 10px;
     text-align: center;
     width: 80%;
+    font-style: italic;
+    color: gray;
 }
 
 .select-card>span{
     color: white;
     font-weight: bold;
+    
 }
 
 .date-column>button{
@@ -86,6 +93,7 @@
 .date-column>.date-text{
     margin-top: 10px;
 }
+
 
 @media screen and (max-width: 832px){
 

@@ -1,6 +1,6 @@
 const Recebiveis = () =>{
     return(
-        <div className='page'>
+        <div className='appPage'>
         
         </div>
     )

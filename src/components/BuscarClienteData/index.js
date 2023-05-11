@@ -7,11 +7,15 @@ import api, { config } from "../../services/api"
 import './buscar.css'
 
 const BuscarClienteData = () => {
-
-    const [dataInicial, setDataInicial] = useState('')
-    const [dataFinal, setDataFinal] = useState('')
     const [BAN, setBAN] = useState([])
     const [loading, setLoading] = useState(false)
+
+    const [grupo, setGrupo] = useState('')
+    const [cliente, setCliente] = useState('')
+    const [adm, setAdm] = useState('')
+    const [dataInicial, setDataInicial] = useState('')
+    const [dataFinal, setDataFinal] = useState('')
+    const [banSelecionada, setBanSelecionada] = useState('')
 
     useEffect(() => {
         const loadBandeiras = async () =>{
@@ -38,15 +42,27 @@ const BuscarClienteData = () => {
         <DateRange startDate={dataInicial} endDate={dataFinal}/>
     }
 
+    function verify(){
+        console.log('verificação')
+        console.log('///////////')
+        console.log('grupo: ' + grupo)
+        console.log('cliente: ' + cliente)
+        console.log('administradora: ' + adm)
+        console.log('bandeira: ' + banSelecionada)
+        console.log('data inicial: ' + dataInicial)
+        console.log('data final: ' + dataFinal)
+    }
+
+
+
     return(
         <>
             <div className='search-bar'>
-                    <div className='date-container'>
+                    <form className='date-container'>
                         <div className='date-column'>
-                            
                             <div className='select-card'>
                                 <span>Grupo de Clientes</span>
-                                <select>
+                                <select value={grupo} onChange={(e) => {setGrupo(e.target.value)}}>
                                     <option selected=''>selecione</option>
                                     <option>place_holder_01</option>
                                     <option>place_holder_02</option>
@@ -63,7 +79,7 @@ const BuscarClienteData = () => {
                         <div  className='date-column'>
                             <div className='select-card'>
                                 <span>Cliente</span>
-                                <select>
+                                <select value={cliente} onChange={(e) => {setCliente(e.target.value)}}>
                                     <option selected=''>selecione</option>
                                     <option>place_holder_01</option>
                                     <option>place_holder_02</option>
@@ -82,7 +98,7 @@ const BuscarClienteData = () => {
                             
                             <div className='select-card'>
                                 <span>Administradora</span>
-                                <select>
+                                <select value={adm} onChange={(e) => {setAdm(e.target.value)}}>
                                     <option selected=''>selecione</option>
                                     <option>place_holder_01</option>
                                     <option>place_holder_02</option>
@@ -93,8 +109,8 @@ const BuscarClienteData = () => {
 
                             <div className='select-card'>
                                 <span>Bandeira</span>
-                                <select>
-                                    <option>selecione</option>
+                                <select value={banSelecionada} onChange={(e) => {setBanSelecionada(e.target.value)}}>
+                                    <option defaultValue=''>selecione</option>
                                     {BAN.map((BAN)=>(
                                         <option value = {BAN.DESCRICAO}>{BAN.DESCRICAO}</option>
                                     ))}
@@ -102,12 +118,13 @@ const BuscarClienteData = () => {
                                 </select>
                             </div>
                         </div>
+    
 
                         <div  className='date-column'>
                             <button className="btn btn-primary" onClick={buscar}>Pesquisar</button>
-                        </div>
-                        
-                    </div>
+                            <button className="btn btn-primary" onClick={verify}>Verificar</button>
+                        </div>   
+                    </form>
                 </div>
         </>
     )

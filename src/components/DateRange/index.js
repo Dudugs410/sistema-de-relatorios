@@ -1,5 +1,7 @@
 import moment from 'moment'
 
+import './dateRange.css'
+
 function DateRange({ startDate, endDate }) {
   const dates = []
 

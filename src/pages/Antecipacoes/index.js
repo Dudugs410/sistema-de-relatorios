@@ -2,7 +2,7 @@
 
 const Antecipacoes = () =>{
     return(
-        <div className='page'>
+        <div className='appPage'>
         
         </div>
     )

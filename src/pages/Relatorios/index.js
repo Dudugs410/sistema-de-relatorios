@@ -1,6 +1,6 @@
 const Relatorios = () =>{
     return(
-        <div className='page'>
+        <div className='appPage'>
         
         </div>
     )

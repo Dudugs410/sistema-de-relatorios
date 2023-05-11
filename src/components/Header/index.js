@@ -8,11 +8,7 @@ import './header.css'
 
 const Header = () =>{
 
-    const { logout, accessToken, isSignedIn } = useContext(AuthContext)
-
-    useEffect(() => {
-        
-    })
+    const { logout, accessToken, isSignedIn, userData, setUserData } = useContext(AuthContext)
 
     return(
         <>
@@ -27,12 +23,14 @@ const Header = () =>{
                     </div>
                     
                     <div className='navbar-customer'>
-                        <span className='client-name'>Cliente Placeholder</span>
+                        <span className='client-name'>{`${userData.NOME}`}</span>
                         <span className='client-code'>123456789101112</span> 
                     </div>              
                 </div>
                 <button type='button' className='btn-exit' onClick={logout}><FiPower color="#000000" size={24}/></button>
-                <button type='button' className='btn-secondary' onClick={() => {console.log('isSignedIn: ' + isSignedIn + '////' + 'Cookies: ' + Cookies.get('token') + '////' + 'accessToken: ' + accessToken )}}>access token</button>
+                <button type='button' className='btn btn-primary' onClick={() => {console.log('isSignedIn: ' + isSignedIn + '////' + 'Cookies: ' + Cookies.get('token') + '////' + 'accessToken: ' + accessToken )}}>access token</button>
+                <button  type='button' className='btn btn-warning' onClick={() => { console.log(sessionStorage.getItem('userData')) }}>userData</button>
+                <button  type='button' className='btn btn-danger' onClick={() => { console.log(isSignedIn) }}>isSignedIn</button>
             </div>
             
             <div className='header-content drop-shadow'>
@@ -54,7 +52,7 @@ const Header = () =>{
                             <Link to='/servicos' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Serviços</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Relatórios</Link>
+                            <Link to='/relatorios' className="nav-hover nav-text nav-link active text-shadow" aria-current="page">Relatórios</Link>
                         </li>
                     </ul>
                 </div>
