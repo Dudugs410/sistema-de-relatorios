@@ -29,7 +29,7 @@ const Header = () =>{
                 </div>
                 <button type='button' className='btn-exit' onClick={logout}><FiPower color="#000000" size={24}/></button>
                 <button type='button' className='btn btn-primary' onClick={() => {console.log('isSignedIn: ' + isSignedIn + '////' + 'Cookies: ' + Cookies.get('token') + '////' + 'accessToken: ' + accessToken )}}>access token</button>
-                <button  type='button' className='btn btn-warning' onClick={() => { console.log(sessionStorage.getItem('userData')) }}>userData</button>
+                <button  type='button' className='btn btn-warning' onClick={() => { console.log(userData) }}>userData</button>
                 <button  type='button' className='btn btn-danger' onClick={() => { console.log(isSignedIn) }}>isSignedIn</button>
             </div>
             

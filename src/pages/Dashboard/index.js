@@ -12,14 +12,17 @@ import { clienteVendas } from "../../resources/teste"
 import GraficoTorta from "../../components/Grafico"
 
 const Dashboard = () => {
-    console.log('Dashboard')
-    const { isSignedIn, setIsSignedIn, accessToken, setAccessToken } = useContext(AuthContext)
+    
+    const { isSignedIn, setIsSignedIn, accessToken, setAccessToken, setUserData } = useContext(AuthContext)
 
+    useEffect(() => {
+        console.log('Dashboard')
+    },[])
+    
     useEffect(() => {
         setIsSignedIn(sessionStorage.getItem('isSignedIn'))
         setAccessToken(Cookies.get('token'))
-
-    })
+    },[])
     
     /////TESTE DO GRÁFICO//////
     // Dados de vendas dos últimos 5 dias

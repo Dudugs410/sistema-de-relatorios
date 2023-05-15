@@ -14,22 +14,19 @@ function AuthProvider({ children }){
   const [userData, setUserData] = useState({})
   const [loading, setLoading] = useState(false)
   const [accessToken, setAccessToken] = useState(undefined)
-  const [users, setUsers] = useState({})
+  const [userList, setUserList] = useState([])
 
+
+useEffect(() =>{
   console.log('auth.js')
+},[])
+  
 
 useEffect(() =>{
   setIsSignedIn(sessionStorage.getItem('isLoggedIn'))
 },[])
 
-useEffect(() => {
-  async function loadUsers(){
-    const usu = await api.get('/usuario', config(accessToken))
-    console.log(users.data)
-    setUsers(usu.data)
-  }
-  loadUsers()
-},[])
+
   /////API de vendas
 /*  
 useEffect(()=>{
@@ -75,25 +72,19 @@ useEffect(()=>{
     e.preventDefault()
     console.log(loading)
     setLoading(true)
+    
     console.log('submitLogin: usuario:' + userLogin +' password:' + userPw)
     console.log('pw md5: ' + md5(userPw))
     await api.post('/token', { client_id: userLogin, client_secret: md5(userPw) })
     .then(response => {
-        console.log('response: ')
-        console.log(response.data)
+
         Cookies.set('token', response.data.acess_token)
-        setUserData(response.data)
         setAccessToken(Cookies.get('token'))
         console.log('sucess: ' + response.data.sucess)
-        
         if(response.data.sucess === true){
           console.log('////////////////////////////////')
           sessionStorage.setItem('isSignedIn', true)
-          sessionStorage.setItem('userData', JSON.stringify(userData))
-          console.log(sessionStorage.getItem('userData'))
-          console.log(isSignedIn)
-          console.log('//////////////////////////////////')
-          setIsSignedIn(true)  
+          setIsSignedIn(true)
         }
     })
     .catch(error =>{
@@ -102,6 +93,22 @@ useEffect(()=>{
         alert(error.message)
         setLoading(false)
     })
+    await api.get('/usuario', config(Cookies.get('token')))
+    .then(response => {
+      setLoading(true)
+      setUserList(response.data)
+      
+      sessionStorage.setItem('userList', JSON.stringify(userList))
+      const userMatch = userList.find(response => response.LOGIN === userLogin)
+      if(userMatch){
+        setUserData(userMatch)
+        sessionStorage.setItem('userData', JSON.stringify(userData))
+      }else{
+        console.log('não encontrado')
+      }
+      setLoading(false)
+      
+  })
     setLoading(false)
     console.log('************fim submitLogin()************')
   }
