@@ -16,6 +16,9 @@ function AuthProvider({ children }){
   const [accessToken, setAccessToken] = useState(undefined)
   const [userList, setUserList] = useState([])
 
+  const [dataInicial, setDataInicial] = useState(new Date().toLocaleDateString())
+  const [dataFinal, setDataFinal] = useState((new Date().toLocaleDateString()))
+  const [cnpj, setCnpj] = useState('')
 
 useEffect(() =>{
   console.log('auth.js')
@@ -143,6 +146,12 @@ useEffect(()=>{
         setUserData,
         accessToken,
         setAccessToken,
+        dataInicial,
+        setDataInicial,
+        dataFinal,
+        setDataFinal,
+        cnpj,
+        setCnpj,
       }}
     >
       {children}

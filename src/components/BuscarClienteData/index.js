@@ -37,9 +37,12 @@ const BuscarClienteData = () => {
             alert('favor selecionar um período de datas válido')
             return
         }
+        else{
+            alert(`executou busca entre os dias ${dataInicial} e ${dataFinal}`);
+            <DateRange startDate={dataInicial} endDate={dataFinal}/>
+        }
 
-        alert(`executou busca entre os dias ${dataInicial} e ${dataFinal}`);
-        <DateRange startDate={dataInicial} endDate={dataFinal}/>
+        
     }
 
     function verify(){
