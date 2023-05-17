@@ -65,8 +65,8 @@ useEffect(() =>{
           if (userMatch) {
             console.log('User found:', userMatch);
             sessionStorage.setItem('isSignedIn', true);
-            setIsSignedIn(true);
             sessionStorage.setItem('userData', JSON.stringify(userMatch));
+            setIsSignedIn(true);
           } else {
             console.log('User not found');
           }
@@ -89,10 +89,10 @@ useEffect(() =>{
   
   /////desloga usuário
   function logout(){
-    sessionStorage.clear()
     console.log('logout()')
+    sessionStorage.clear()
     setIsSignedIn(false)
-    setUserData(undefined)
+    setUserData({})
     Cookies.remove('token')
     console.log('************fim logout()************')
   }

@@ -24,7 +24,8 @@ export default function Private({children}){
 
 
 
-  if(!signed){
+  if(!isSignedIn){
+    console.log('clearing')
     sessionStorage.clear()
     Cookies.remove('token')
     return <Navigate to="/"/>
