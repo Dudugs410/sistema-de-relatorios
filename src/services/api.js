@@ -1,24 +1,18 @@
 import axios from 'axios'
+import Cookies from 'js-cookie';
+
+axios.defaults.headers.common['Content-Type'] = 'application/json';
+axios.defaults.headers.common['authorization'] = `Bearer ${Cookies.get('token')}`
 
 export function config(accessToken){
     const config = { headers:{ 
         Authorization:`Bearer ${accessToken}`,
+        'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Accept': '*/*'
         } 
     }
     return config
 
-}
-
-export function params(cnpj, dataInicial, dataFinal){
-    const params = { 
-        cnpj: `${cnpj}`,
-        dataInicial:`${dataInicial}` ,
-        dataFinal: `${dataFinal}`,
-        }  
-    return params
-    
 }
 
 const api = axios.create({

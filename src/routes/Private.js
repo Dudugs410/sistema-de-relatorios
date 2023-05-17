@@ -13,21 +13,16 @@ export default function Private({children}){
   
   useEffect(()=>{
     console.log('Private.js')
-  })
+  },[])
 
   useEffect(() => {
-      setIsSignedIn(sessionStorage.getItem('isSignedIn'))
       setAccessToken(Cookies.get('token'))
+      setIsSignedIn(sessionStorage.getItem('isSignedIn'))
       setLoading(sessionStorage.getItem('loading'))
       setUserData(JSON.parse(sessionStorage.getItem('userData')))
   },[])
 
-  if(loading){
-    console.log('loading... isSignedIn: ' + isSignedIn)
-    return(
-      <LoadingModal/>
-    )
-  }
+
 
   if(!signed){
     sessionStorage.clear()

@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import DateRange from "../DateRange"
 import Cookies from "js-cookie"
 
-import api, { config } from "../../services/api"
+import { AuthContext } from "../../contexts/auth"
+import api from "../../services/api"
 
 import './buscar.css'
 
@@ -16,10 +17,13 @@ const BuscarClienteData = () => {
     const [dataInicial, setDataInicial] = useState('')
     const [dataFinal, setDataFinal] = useState('')
     const [banSelecionada, setBanSelecionada] = useState('')
+    const [totalVendas, setTotalVendas] = useState([])
+
+    const { loadVendas } = useContext(AuthContext)
 
     useEffect(() => {
         const loadBandeiras = async () =>{
-          const result = await api.get('/bandeira', config(Cookies.get('token')))
+          const result = await api.get('/bandeira')
           console.log(result)
           setBAN(result.data)
           setLoading(false)
@@ -39,7 +43,6 @@ const BuscarClienteData = () => {
         }
         else{
             alert(`executou busca entre os dias ${dataInicial} e ${dataFinal}`);
-            <DateRange startDate={dataInicial} endDate={dataFinal}/>
         }
 
         
