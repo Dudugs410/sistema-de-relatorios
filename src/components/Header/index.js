@@ -9,6 +9,7 @@ import './header.css'
 const Header = () =>{
 
     const { logout, accessToken, isSignedIn, userData, setUserData } = useContext(AuthContext)
+    const nome = JSON.parse(sessionStorage.getItem('userData')).NOME
 
     return(
         <>
@@ -23,7 +24,7 @@ const Header = () =>{
                     </div>
                     
                     <div className='navbar-customer'>
-                        <span className='client-name'>{`${userData.NOME}`}</span>
+                        <span className='client-name'>{`${nome}`}</span>
                         <span className='client-code'>123456789101112</span> 
                     </div>              
                 </div>
